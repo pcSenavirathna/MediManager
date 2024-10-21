@@ -1,0 +1,176 @@
+.payment-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	font-family: Arial, sans-serif;
+	min-height: 100vh;
+	background-image: url('../../images/pay.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* Glassmorphism effect for both sections */
+.bill-section {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(2px);
+	padding: 20px;
+	border-radius: 15px;
+	margin-top: 5%;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	width: 50%;
+	margin-bottom: 20px;
+	color: #ffffff;
+	height: 70vh;
+}
+
+.payment-section {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(2px);
+	padding: 20px;
+	border-radius: 15px;
+	margin-top: 5%;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	width: 20%;
+	margin-bottom: 20px;
+	color: #ffffff;
+	height: 70vh;
+}
+
+/* Headings */
+.bill-section h2,
+.payment-section h2 {
+	color: #ffffff;
+}
+
+/* Bill details styling */
+.bill-details p {
+	font-size: 23px;
+	line-height: 1.8;
+	font-weight: bold;
+}
+
+.bill-details span {
+	float: right;
+	font-weight: bold;
+}
+
+.bill-details hr {
+	margin: 10px 0;
+}
+
+/* Payment form input fields */
+.payment-form input {
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid rgba(84, 30, 233, 0.845);
+	border-radius: 5px;
+	background: rgb(255, 253, 253);
+	color: #000;
+	font-size: large;
+
+
+
+}
+
+.payment-form select {
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid rgba(84, 30, 233, 0.845);
+	border-radius: 5px;
+	background: rgb(255, 253, 253);
+	font-size: large;
+	color: #000;
+	width: 100%;
+	/* Ensures the select box takes full width */
+}
+.error-messages {
+	color: red;
+	background-color: #f8d7da;
+	border: 1px solid #f5c6cb;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+.error-messages ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.error-messages li {
+	margin-bottom: 5px;
+}
+
+
+/* Split the card info for expiry date and CVC */
+.card-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-info input {
+	width: 48%;
+}
+
+
+
+/* Button styling */
+button {
+	width: 100%;
+	padding: 12px;
+	background-color: #00b0ff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #007bb5;
+}
+
+
+@media (max-width: 768px) {
+	.payment-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.bill-section,
+	.payment-section {
+		width: 100%;
+		margin-bottom: 20px;
+
+	}
+}
+
+@media (max-width: 480px) {
+
+	.bill-section,
+	.payment-section {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.payment-form input {
+		padding: 8px;
+	}
+
+	button {
+		padding: 12px;
+	}
+
+	.card-info {
+		flex-direction: column;
+	}
+
+	.card-info input {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}

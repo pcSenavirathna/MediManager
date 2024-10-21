@@ -1,0 +1,182 @@
+.glass-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url('../../images/digital.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	padding: 20px;
+	width: auto;
+	height: auto;
+	/* Reduced padding for mobile */
+}
+
+.download-buttons {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.download-buttons button {
+	background-color: #05e01f;
+	color: rgb(0, 0, 0);
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-size: medium;
+	font-weight: bold;
+	width: 150px;
+		margin-bottom: 10px;
+}
+
+.download-buttons button:hover {
+	background-color: #00841d;
+}
+
+.card-details p {
+	margin: 5px 0;
+	font-size: 16px;
+	/* Adjust font size if needed */
+}
+
+/* Ensure the unique key stands out */
+.card-details p:last-child {
+	font-weight: bold;
+	/* Make unique key bold */
+}
+
+
+
+.card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 700px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15px);
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	color: white;
+	font-size: larger;
+	height: auto;
+	/* Auto height for mobile */
+}
+
+.qr-code {
+	margin: 20px 0;
+}
+
+.card-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	/* Center text in mobile */
+}
+
+.card-details p {
+	margin: 5px 0;
+}
+
+h2 {
+	color: white;
+	font-size: 30px;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+	.glass-card {
+		padding: 20px;
+		/* Reduced padding */
+	}
+
+	.card-content {
+		width: 100%;
+		padding: 15px;
+		margin-top: 10px;
+		height: auto;
+		/* Allow the card to expand based on content */
+	}
+
+	.qr-code {
+		margin-bottom: 15px;
+	}
+
+	.card-details p {
+		font-size: 14px;
+		/* Slightly smaller text for mobile */
+	}
+
+	h2 {
+		font-size: 22px;
+		/* Adjust title size */
+	}
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+	.card-content {
+		padding: 10px;
+	}
+
+	.qr-code {
+		margin-bottom: 10px;
+	}
+
+	.card-details p {
+		font-size: 12px;
+		/* Further reduce text size */
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+}
+
+/* Add this to your AccessCard.css or create a separate CSS file */
+
+@media (max-width: 768px) {
+	.menuIcon {
+		display: block;
+		/* Show menu icon on smaller screens */
+	}
+
+	.navMenu {
+		display: none;
+		/* Hide menu by default on smaller screens */
+	}
+
+	.navMenuActive {
+		display: flex;
+		flex-direction: column;
+		/* Stack items vertically */
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #3498db;
+		padding: 1rem 0;
+		z-index: 999;
+	}
+
+	.navItem {
+		margin: 0.5rem 0;
+		/* Adjust margins for stacked items */
+		text-align: center;
+		/* Center text for mobile view */
+	}
+
+	.navLink {
+		font-size: 1.2rem;
+		/* Larger font for mobile */
+	}
+}

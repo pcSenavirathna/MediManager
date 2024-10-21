@@ -1,0 +1,106 @@
+/* General Styles */
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #ffffff;
+	box-sizing: border-box;
+}
+
+.containerr {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url('../../images/background.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 20px 50px;
+	color: #fff;
+}
+
+/* Card Style */
+.cardd {
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px 30px;
+	max-width: 400px;
+	width: 100%;
+	text-align: center;
+	position: flex;
+	top: 50%;
+	background: rgba(188, 187, 187, 0.3);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.cardd h2 {
+	margin-bottom: 20px;
+	color: #ffffff;
+	font-size: 24px;
+}
+
+.formm {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.formm input,
+select {
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+	color: #000000;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.radio-groupp {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	margin-left: 1%;
+}
+
+.formm button {
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.formm button:hover {
+	background-color: #0056b3;
+}
+
+.formm input:focus,
+select:focus {
+	border-color: #007bff;
+	/* Change border color to blue on focus */
+	outline: none;
+	border-width: 3px;
+	/* Remove the default outline */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.cardd {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.formm input,
+		.formm button {
+		padding: 10px;
+	}
+}
